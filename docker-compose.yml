@@ -1,0 +1,25 @@
+version: "3.7"
+
+services:
+
+  project2:
+    build: proj2
+    container_name: gui1
+    restart: always
+    environment:
+      - APP_NAME=spiuder1
+    expose:
+      - 5000
+    ports:
+      [5000:5000]
+
+  project3:
+    build: proj3
+    container_name: gui2
+    restart: always
+    environment:
+       - APP_NAME=spider2
+    expose:
+      - 5001
+    ports:
+      [5001:5000]
